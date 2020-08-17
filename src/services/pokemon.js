@@ -16,5 +16,4 @@ export async function getPokemon(data) {
         resolve(data)
       });
   })
-
 }
