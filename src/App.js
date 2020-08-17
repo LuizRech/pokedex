@@ -1,24 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { getAllPokemon, getPokemon } from './services/pokemon';
 
 function App() {
+
+  const [nextPage, setNextPage ] = useState('');    
+  const [prevPage, setPrevPage ] = useState('');    
+
+  const [pokemonData, setPokemonData] = useState([]);
+
+  useEffect(() => {
+    async function searchPokemonList(){
+      let response = await getAllPokemon();  
+      setNextPage(response.next);
+      setPrevPage(response.previous);
+      
+      await getPokemonDetail(response.results)
+    };
+
+    searchPokemonList();
+  },[]);
+
+  const getPokemonDetail = async (allUrlPokemons) => {
+
+    const _pokemons = await Promise.all(
+      allUrlPokemons.map(async data => {
+        let returnedDataPokemon = await getPokemon(data.url);
+        return returnedDataPokemon;
+      })
+    );
+    
+
+    setPokemonData(_pokemons);
+  }
+
+  if(pokemonData.length > 0){
+    pokemonData.map(data => {
+      console.log(data.name)
+    })
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>Olá</p>
     </div>
   );
 }
