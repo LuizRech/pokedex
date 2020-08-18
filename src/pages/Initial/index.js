@@ -24,23 +24,16 @@ function Initial() {
   },[]);
 
   const getPokemonDetail = async (allUrlPokemons) => {
-
     const _pokemons = await Promise.all(
       allUrlPokemons.map(async data => {
         let returnedDataPokemon = await getPokemon(data.url);
         return returnedDataPokemon;
       })
     );
-    
 
     setPokemonData(_pokemons);
   }
 
-  if(pokemonData.length > 0){
-    pokemonData.map(data => {
-      console.log(data.name)
-    })
-  }
   return (
     <div className="Initial">
       <Card
@@ -48,8 +41,6 @@ function Initial() {
         className="card"
       />
     </div>
-
-    
   );
 }
 

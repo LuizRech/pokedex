@@ -1,6 +1,5 @@
 .cardContainer {
   border-radius: 20%;
-  /* border: 1px solid red; */
   width: 250px;
   height: 250px;
   background-color: white;
@@ -9,16 +8,19 @@
 .imgPoke {
   display: flex;
   border-radius: 20%;
-  border: 1px solid red;
   height: 40%;
   align-items: center;
   justify-content: center;
 }
 
+.imgPoke img {
+  height: 70%;
+  width: 70%;
+}
+
 .typePoke {
   display: flex;
   border-radius: 20%;
-  border: 1px solid blue;
   height: 25%;
   align-items: center;
   justify-content: center;
@@ -29,7 +31,3 @@
   align-items: center;
   justify-content: center;
 }
-
-/* .dataPokeSpan {
-  
-} */
