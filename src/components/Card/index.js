@@ -14,17 +14,22 @@ function Card({ data }){
             <img src={poke.sprites.front_default} alt="Image" />
           </div>
 
+          <div className="namePoke">
+            {poke.name}
+          </div>
+
           <div className="typePoke">
             {poke.types.map(types => {
               return(
-              <p key={types.type.name}>{types.type.name}</p>
+                <p className="type" key={types.type.name}>{types.type.name}</p>
               )
             })}
           </div>
 
           <div className="dataPoke">
-            <span>Height: {poke.height} </span>
+            <span>Ability: {poke.abilities[0].ability.name} </span>
             <span>Weight: {poke.weight}</span>
+            <span >Height: {poke.height}</span>
           </div>
         </div>
       ))

@@ -1,28 +1,23 @@
 .cardContainer {
-  border-radius: 20%;
-  width: 250px;
-  height: 250px;
+  border-radius: 10%;
   background-color: white;
+  margin: 5px;
 }
 
 .imgPoke {
   display: flex;
-  border-radius: 20%;
-  height: 40%;
   align-items: center;
   justify-content: center;
 }
 
-.imgPoke img {
-  height: 70%;
-  width: 70%;
+.namePoke {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
 }
 
 .typePoke {
   display: flex;
-  border-radius: 20%;
-  height: 25%;
-  align-items: center;
   justify-content: center;
 }
 
@@ -30,4 +25,11 @@
   display: grid;
   align-items: center;
   justify-content: center;
+  padding-bottom: 10px;
+}
+
+.type {
+  background-color: #fd7d24;
+  border: 1px solid #9C531F;
+  border-radius: 20%;
 }
