@@ -38,18 +38,22 @@ function Initial() {
 
   return (
     <>
-      <button onClick={() => {prevPage ? setUrlToFetch(prevPage) : alert("Isn't possible!")}}>Previous</button>
-      <button onClick={() => {nextPage ? setUrlToFetch(nextPage) : alert("Isn't possible!")}}>Next</button>
+      <div className="bttn-div">
+        <button className="bttn" onClick={() => {prevPage ? setUrlToFetch(prevPage) : alert("Isn't possible!")}}>Previous</button>
+        <button className="bttn" onClick={() => {nextPage ? setUrlToFetch(nextPage) : alert("Isn't possible!")}}>Next</button>
+      </div>
       
-      <div className="Initial">
+      <div className="initial">
         <Card
           data={pokemonData}
           className="card"
         />
       </div>
     
-      <button onClick={() => {prevPage ? setUrlToFetch(prevPage) : alert("Isn't possible!")}}>Previous</button>
-      <button onClick={() => {nextPage ? setUrlToFetch(nextPage) : alert("Isn't possible!")}}>Next</button>  
+      <div className="bttn-div">
+        <button className="bttn" onClick={() => {prevPage ? setUrlToFetch(prevPage) : alert("Isn't possible!")}}>Previous</button>
+        <button className="bttn" onClick={() => {nextPage ? setUrlToFetch(nextPage) : alert("Isn't possible!")}}>Next</button>
+      </div>
     </>
   );
 }
