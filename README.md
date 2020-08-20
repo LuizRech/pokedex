@@ -1,3 +1,7 @@
+View the project <3 [https://pokedexz.vercel.app/](https://pokedexz.vercel.app/)
+
+</hr>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
