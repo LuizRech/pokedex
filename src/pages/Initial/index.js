@@ -6,6 +6,8 @@ import './styles.css';
 
 function Initial() {
 
+  const [urlToFetch, setUrlToFetch] = useState("https://pokeapi.co/api/v2/pokemon/");
+
   const [nextPage, setNextPage ] = useState('');    
   const [prevPage, setPrevPage ] = useState('');    
 
@@ -13,7 +15,7 @@ function Initial() {
 
   useEffect(() => {
     async function searchPokemonList(){
-      let response = await getAllPokemon();  
+      let response = await getAllPokemon(urlToFetch);
       setNextPage(response.next);
       setPrevPage(response.previous);
       
@@ -21,7 +23,7 @@ function Initial() {
     };
 
     searchPokemonList();
-  },[]);
+  },[urlToFetch]);
 
   const getPokemonDetail = async (allUrlPokemons) => {
     const _pokemons = await Promise.all(
@@ -35,12 +37,20 @@ function Initial() {
   }
 
   return (
-    <div className="Initial">
-      <Card
-        data={pokemonData}
-        className="card"
-      />
-    </div>
+    <>
+      <button onClick={() => {prevPage ? setUrlToFetch(prevPage) : alert("Isn't possible!")}}>Previous</button>
+      <button onClick={() => {nextPage ? setUrlToFetch(nextPage) : alert("Isn't possible!")}}>Next</button>
+      
+      <div className="Initial">
+        <Card
+          data={pokemonData}
+          className="card"
+        />
+      </div>
+    
+      <button onClick={() => {prevPage ? setUrlToFetch(prevPage) : alert("Isn't possible!")}}>Previous</button>
+      <button onClick={() => {nextPage ? setUrlToFetch(nextPage) : alert("Isn't possible!")}}>Next</button>  
+    </>
   );
 }
 

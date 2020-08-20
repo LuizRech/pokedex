@@ -6,7 +6,6 @@ function Card({ data }){
   const pokemon = data;
   
   if(pokemon.length > 0){
-    console.log(data);
     return(
       pokemon.map(poke => (
         <div className="cardContainer" key={poke.id}>
