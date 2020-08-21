@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './styles.css';
+import './types.css';
 
 function Card({ data }){
   const pokemon = data;
@@ -20,7 +21,7 @@ function Card({ data }){
           <div className="typePoke">
             {poke.types.map(types => {
               return(
-                <p className="type" key={types.type.name}>{types.type.name}</p>
+                <p className={"type " + types.type.name} key={types.type.name}>{types.type.name}</p>
               )
             })}
           </div>

@@ -29,7 +29,8 @@
 }
 
 .type {
-  background-color: #fd7d24;
-  border: 1px solid #9C531F;
+  border: 1px solid #8f8f8fcd;
   border-radius: 20%;
+  padding: 2px 5px;
+  margin-left: 5px;
 }
