@@ -1,4 +1,8 @@
-View the project <3 [https://pokedexz.vercel.app/](https://pokedexz.vercel.app/)
+Check the project <3 [https://pokedexz.vercel.app/](https://pokedexz.vercel.app/)
+
+</hr>
+
+Check the mobile version <3 [https://github.com/LuizRech/pokedex-mobile](https://github.com/LuizRech/pokedex-mobile)
 
 </hr>
 

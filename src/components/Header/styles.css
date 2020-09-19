@@ -1,0 +1,24 @@
+  /* margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box; */
+
+.headerContainer {
+  width: auto;
+  height: 50px;
+  background-color: #306f8a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin-left: 15px;
+}
+
+.git {
+  margin-right: 15px;
+}
+
+
